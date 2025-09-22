@@ -23,7 +23,6 @@ def run_calculator_with_input(monkeypatch, inputs):
     sys.stdout = sys.__stdout__  # Reset stdout
     return captured_output.getvalue()
 
-
 # Positive Tests
 def test_addition(monkeypatch):
     """Test addition operation in REPL."""
