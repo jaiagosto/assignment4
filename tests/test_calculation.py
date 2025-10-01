@@ -4,7 +4,7 @@
 Unit tests for the calculator_calculations module using pytest.
 
 This test suite covers both positive and negative scenarios for the Calculation
-classes and the CalculationFactory. It ensures that calculcations execute correctly,
+classes and the CalculationFactory. It ensures that calculations execute correctly,
 the factory creates appropriate instances, and error handling behaves as expected.
 
 Tests are organized following the AAA  (Arrange, Act, Assert) pattern and adhere
@@ -203,7 +203,7 @@ def test_divide_calculation_execute_negative(mock_division):
     with pytest.raises(Exception) as exc_info:
         divide_calc.execute()
     
-    assert str(exc_info.value) == "Division error"
+    assert str(exc_info.value) == "Cannot divide by zero."
 
 
 def test_divide_calculation_execute_division_by_zero():
@@ -311,7 +311,7 @@ def test_modulus_calculation_execute_negative(mock_modulus):
     with pytest.raises(Exception) as exc_info:
         modulus_calc.execute()
     
-    assert str(exc_info.value) == "Modulus error"
+    assert str(exc_info.value) == "Modulus by zero is not allowed."
 
 
 def test_modulus_calculation_execute_modulus_by_zero():

@@ -154,22 +154,21 @@ class Operation:
 
         **Advantages of Static Methods in Utility Classes:**
         - Static methods in utility classes like this one provide simple access to functions 
-        without requiring an instance of the class. This reduces overhead and makes 
-        the methods easily reusable in other parts of the program.
-        """
+          without requiring an instance of the class. This reduces overhead and makes 
+          the methods easily reusable in other parts of the program.
+         """
         if not isinstance(base, (int, float)) or not isinstance(exponent, (int, float)):
-          raise TypeError("Both base and exponent must be numeric types.")
+         raise TypeError("Both base and exponent must be numeric types.")
     
         # Check for 0^0 which is mathematically undefined
         if base == 0.0 and exponent == 0.0:
-          raise ValueError("0^0 is undefined.")
-    
+         raise ValueError("0^0 is undefined.")
         return base ** exponent
 
 
     @staticmethod
     def modulus(a: float, b: float) -> float:
-         """
+        """
          Returns the remainder of dividing the first number by the second (modulus operation).
 
          **Parameters:**
@@ -187,10 +186,8 @@ class Operation:
          >>> Operation.modulus(10.0, 3.0)
          1.0
          """
-         if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
           raise TypeError("Both operands must be numeric types.")
-    
-         if b == 0:
+        if b == 0:
           raise ValueError("Modulus by zero is not allowed.")
-    
-         return a % b
+        return a % b

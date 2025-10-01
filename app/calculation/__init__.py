@@ -275,11 +275,11 @@ class PowerCalculation(Calculation):
         """Override to use base and exponent in string representation."""
         result = self.execute()
         operation_name = self.__class__.__name__.replace('Calculation', '')
-        return f"{self.__class__.__name__}: {self.base} {operation_name} {self.exponent} = {result}"
+        return f"{self.__class__.__name__}: {self.a} {operation_name} {self.b} = {result}"
     
     def __repr__(self) -> str:
         """Override to use base and exponent in representation."""
-        return f"{self.__class__.__name__}(base={self.base}, exponent={self.exponent})"
+        return f"{self.__class__.__name__}(base={self.a}, exponent={self.b})"
     
 @CalculationFactory.register_calculation('modulus')
 class ModulusCalculation(Calculation):
