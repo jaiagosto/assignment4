@@ -13,6 +13,9 @@ to PEP8 standards for code style and formatting.
 
 import pytest
 from unittest.mock import patch
+import sys, importlib
+import app.calculation
+importlib.reload(app.calculation)
 from app.operations import Operation
 from app.calculation import (
     CalculationFactory,
